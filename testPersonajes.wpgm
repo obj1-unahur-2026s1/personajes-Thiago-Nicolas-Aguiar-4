@@ -1,0 +1,23 @@
+import jugadores.*
+import personajes.*
+import elementos.*
+import armas.*
+
+program pruebaJuego {
+    // 1. Preparamos a Luisa
+    luisa.cambioDePersonaje(mario)
+    luisa.personajeActual()
+    // 2. Mario encuentra elementos
+    luisa.aparece(tipa)
+    luisa.aparece(castillo)
+    // 3. Verificamos a Mario
+    console.println("¿Mario es feliz? " + mario.estaFeliz()) 
+    // Debería ser true porque 16 + 34 = 50 exactos.
+    
+    // 4. Cambiamos a Floki
+    luisa.cambioDePersonaje(floki)
+    luisa.personajeActual()
+    // 5. Floki ataca
+    luisa.aparece(aurora)
+    console.println("¿Aurora sigue viva? " + aurora.estadoDeVida())
+}
